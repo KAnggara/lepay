@@ -4,6 +4,7 @@
   "description": "Unofficial WhatsApp API by Wahyuda Setiadi",
   "main": "index.js",
   "type": "module",
+  "prestart": "npm install",
   "scripts": {
     "test": "jest -i"
   },
