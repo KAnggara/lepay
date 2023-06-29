@@ -1,8 +1,17 @@
+/* eslint-disable no-console */
 import express from 'express';
-import userController from '../controllers/user-controller.js';
+import {
+  addDevices,
+  getDevices,
+  getAllDevices,
+  deleteDevices,
+} from '../controllers/devicesController.js';
 
 const publicRouter = new express.Router();
 
-publicRouter.post('/api/users', userController.register);
+publicRouter.post('/devices', addDevices);
+publicRouter.get('/devices', getAllDevices);
+publicRouter.get('/devices/:device_id', getDevices);
+publicRouter.delete('/devices/:device_id', deleteDevices);
 
 export { publicRouter };

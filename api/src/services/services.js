@@ -7,6 +7,7 @@ import https from 'https';
  */
 function apiRequest(params) {
   return new Promise((resolve, reject) => {
+    let payloadBuffer;
     let responseBody = '';
     const options = {
       method: params.method || 'GET',
@@ -17,7 +18,7 @@ function apiRequest(params) {
     };
 
     if (params.method === 'POST') {
-      const payloadBuffer = Buffer.from(params.payload);
+      payloadBuffer = Buffer.from(params.payload);
       options.headers['Content-Length'] = payloadBuffer.length;
     }
 
@@ -37,9 +38,9 @@ function apiRequest(params) {
       });
     });
 
-    // if (params.method === 'POST') {
-    //   req.write(payloadBuffer);
-    // }
+    if (params.method === 'POST') {
+      req.write(payloadBuffer);
+    }
 
     req.end();
   }); // Promise
