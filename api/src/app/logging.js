@@ -2,7 +2,10 @@ import winston from 'winston';
 
 export const logger = winston.createLogger({
   level: 'verbose',
-  format: winston.format.json(),
+  format: winston.format.combine(
+    winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+    winston.format.json()
+  ),
   transports: [
     new winston.transports.Console({
       level: 'error',
