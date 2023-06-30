@@ -9,7 +9,14 @@
             "name": "Webhook",
             "containerId": "",
             "created": "2023-06-30T03:40:04.268Z",
-            "sortNum": 20000
+            "sortNum": 20000,
+            "settings": {
+                "runOptions": {
+                    "delay": 1500,
+                    "iterations": 1,
+                    "dataFilePath": ""
+                }
+            }
         }
     ],
     "requests": [
