@@ -17,12 +17,50 @@
             "_id": "a54dfb41-baf8-4ad9-9fa6-d19b48d0ff4c",
             "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
             "containerId": "e2d86400-83a7-411a-8b7b-e821507587d0",
-            "name": "incoming msg",
+            "name": "InMsg Hallo",
             "url": "{{host}}/webhook",
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-06-30T03:40:12.702Z",
-            "modified": "2023-06-30T11:54:04.618Z",
+            "modified": "2023-06-30T12:36:00.753Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"kwid-2605630cf636463da5ce2f4110a\",\n  \"webhook_type\": \"incoming_message\",\n  \"payload\": {\n    \"id\": \"kwid-2605630cf636463da5ce2f4110a\",\n    \"device_id\": \"iphone-x-pro\",\n    \"sender\": \"{{sender}}\",\n    \"from_me\": false,\n    \"message_type\": \"text\",\n    \"text\": \"Hallo\",\n    \"caption\": null,\n    \"is_group_message\": false,\n    \"group_id\": null,\n    \"timestamp\": 1631306956,\n    \"contact\": {\n      \"name\": null,\n      \"vcard\": null\n    },\n    \"location\": {\n      \"latitude\": 0,\n      \"longitude\": 0,\n      \"name\": null,\n      \"address\": null\n    },\n    \"meta\": {\n      \"file_name\": null,\n      \"seconds\": 0,\n      \"size\": 41,\n      \"mime_type\": \"plain/text\",\n      \"dimension\": {\n        \"height\": 0,\n        \"width\": 0\n      }\n    },\n    \"interactive_response\": {\n      \"id\": null,\n      \"label\": null\n    }\n  },\n  \"created_at\": \"2021-09-10T20:49:16.000Z\",\n  \"server_time\": \"2021-09-10T20:49:17.462Z\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "Content-Length",
+                    "custom": "",
+                    "action": ">",
+                    "value": "0"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "_id": "b469e8ad-260b-493b-9feb-02585a2fcddd",
+            "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
+            "containerId": "e2d86400-83a7-411a-8b7b-e821507587d0",
+            "name": "InMsg on",
+            "url": "{{host}}/webhook",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-06-30T12:31:18.545Z",
+            "modified": "2023-06-30T12:31:18.545Z",
             "headers": [],
             "params": [],
             "body": {
@@ -30,7 +68,140 @@
                 "raw": "{\n  \"id\": \"kwid-2605630cf636463da5ce2f4110a\",\n  \"webhook_type\": \"incoming_message\",\n  \"payload\": {\n    \"id\": \"kwid-2605630cf636463da5ce2f4110a\",\n    \"device_id\": \"iphone-x-pro\",\n    \"sender\": \"6285186858487\",\n    \"from_me\": false,\n    \"message_type\": \"text\",\n    \"text\": \"Hallo\",\n    \"caption\": null,\n    \"is_group_message\": false,\n    \"group_id\": null,\n    \"timestamp\": 1631306956,\n    \"contact\": {\n      \"name\": null,\n      \"vcard\": null\n    },\n    \"location\": {\n      \"latitude\": 0,\n      \"longitude\": 0,\n      \"name\": null,\n      \"address\": null\n    },\n    \"meta\": {\n      \"file_name\": null,\n      \"seconds\": 0,\n      \"size\": 41,\n      \"mime_type\": \"plain/text\",\n      \"dimension\": {\n        \"height\": 0,\n        \"width\": 0\n      }\n    },\n    \"interactive_response\": {\n      \"id\": null,\n      \"label\": null\n    }\n  },\n  \"created_at\": \"2021-09-10T20:49:16.000Z\",\n  \"server_time\": \"2021-09-10T20:49:17.462Z\"\n}",
                 "form": []
             },
-            "tests": []
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "Content-Length",
+                    "custom": "",
+                    "action": ">",
+                    "value": "0"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "_id": "589c3572-448e-44ab-80dc-a3a3e38c4216",
+            "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
+            "containerId": "e2d86400-83a7-411a-8b7b-e821507587d0",
+            "name": "InMsg nyala",
+            "url": "{{host}}/webhook",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-06-30T12:31:42.476Z",
+            "modified": "2023-06-30T12:31:42.476Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"kwid-2605630cf636463da5ce2f4110a\",\n  \"webhook_type\": \"incoming_message\",\n  \"payload\": {\n    \"id\": \"kwid-2605630cf636463da5ce2f4110a\",\n    \"device_id\": \"iphone-x-pro\",\n    \"sender\": \"6285186858487\",\n    \"from_me\": false,\n    \"message_type\": \"text\",\n    \"text\": \"Hallo\",\n    \"caption\": null,\n    \"is_group_message\": false,\n    \"group_id\": null,\n    \"timestamp\": 1631306956,\n    \"contact\": {\n      \"name\": null,\n      \"vcard\": null\n    },\n    \"location\": {\n      \"latitude\": 0,\n      \"longitude\": 0,\n      \"name\": null,\n      \"address\": null\n    },\n    \"meta\": {\n      \"file_name\": null,\n      \"seconds\": 0,\n      \"size\": 41,\n      \"mime_type\": \"plain/text\",\n      \"dimension\": {\n        \"height\": 0,\n        \"width\": 0\n      }\n    },\n    \"interactive_response\": {\n      \"id\": null,\n      \"label\": null\n    }\n  },\n  \"created_at\": \"2021-09-10T20:49:16.000Z\",\n  \"server_time\": \"2021-09-10T20:49:17.462Z\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "Content-Length",
+                    "custom": "",
+                    "action": ">",
+                    "value": "0"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "_id": "eae37c1d-7c64-442e-9904-2f2b4040d19a",
+            "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
+            "containerId": "e2d86400-83a7-411a-8b7b-e821507587d0",
+            "name": "InMsg off",
+            "url": "{{host}}/webhook",
+            "method": "POST",
+            "sortNum": 45000,
+            "created": "2023-06-30T12:31:45.829Z",
+            "modified": "2023-06-30T12:31:45.829Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"kwid-2605630cf636463da5ce2f4110a\",\n  \"webhook_type\": \"incoming_message\",\n  \"payload\": {\n    \"id\": \"kwid-2605630cf636463da5ce2f4110a\",\n    \"device_id\": \"iphone-x-pro\",\n    \"sender\": \"6285186858487\",\n    \"from_me\": false,\n    \"message_type\": \"text\",\n    \"text\": \"Hallo\",\n    \"caption\": null,\n    \"is_group_message\": false,\n    \"group_id\": null,\n    \"timestamp\": 1631306956,\n    \"contact\": {\n      \"name\": null,\n      \"vcard\": null\n    },\n    \"location\": {\n      \"latitude\": 0,\n      \"longitude\": 0,\n      \"name\": null,\n      \"address\": null\n    },\n    \"meta\": {\n      \"file_name\": null,\n      \"seconds\": 0,\n      \"size\": 41,\n      \"mime_type\": \"plain/text\",\n      \"dimension\": {\n        \"height\": 0,\n        \"width\": 0\n      }\n    },\n    \"interactive_response\": {\n      \"id\": null,\n      \"label\": null\n    }\n  },\n  \"created_at\": \"2021-09-10T20:49:16.000Z\",\n  \"server_time\": \"2021-09-10T20:49:17.462Z\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "Content-Length",
+                    "custom": "",
+                    "action": ">",
+                    "value": "0"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "_id": "05e73f2b-1e20-41b1-8df0-164831e08d58",
+            "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
+            "containerId": "e2d86400-83a7-411a-8b7b-e821507587d0",
+            "name": "InMsg mati",
+            "url": "{{host}}/webhook",
+            "method": "POST",
+            "sortNum": 42500,
+            "created": "2023-06-30T12:31:47.793Z",
+            "modified": "2023-06-30T12:31:47.793Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"kwid-2605630cf636463da5ce2f4110a\",\n  \"webhook_type\": \"incoming_message\",\n  \"payload\": {\n    \"id\": \"kwid-2605630cf636463da5ce2f4110a\",\n    \"device_id\": \"iphone-x-pro\",\n    \"sender\": \"6285186858487\",\n    \"from_me\": false,\n    \"message_type\": \"text\",\n    \"text\": \"Hallo\",\n    \"caption\": null,\n    \"is_group_message\": false,\n    \"group_id\": null,\n    \"timestamp\": 1631306956,\n    \"contact\": {\n      \"name\": null,\n      \"vcard\": null\n    },\n    \"location\": {\n      \"latitude\": 0,\n      \"longitude\": 0,\n      \"name\": null,\n      \"address\": null\n    },\n    \"meta\": {\n      \"file_name\": null,\n      \"seconds\": 0,\n      \"size\": 41,\n      \"mime_type\": \"plain/text\",\n      \"dimension\": {\n        \"height\": 0,\n        \"width\": 0\n      }\n    },\n    \"interactive_response\": {\n      \"id\": null,\n      \"label\": null\n    }\n  },\n  \"created_at\": \"2021-09-10T20:49:16.000Z\",\n  \"server_time\": \"2021-09-10T20:49:17.462Z\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "Content-Length",
+                    "custom": "",
+                    "action": ">",
+                    "value": "0"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": ""
+                }
+            ]
         }
     ]
 }
