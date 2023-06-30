@@ -5,26 +5,31 @@
     "sortNum": 10000,
     "folders": [
         {
-            "_id": "3866f481-44e3-4d24-80dc-7d61046a4440",
-            "name": "Devices",
+            "_id": "e2d86400-83a7-411a-8b7b-e821507587d0",
+            "name": "Webhook",
             "containerId": "",
-            "created": "2023-06-30T03:30:08.874Z",
-            "sortNum": 10000
+            "created": "2023-06-30T03:40:04.268Z",
+            "sortNum": 20000
         }
     ],
     "requests": [
         {
-            "_id": "fcf63e0b-32a1-4119-80a5-90caab5a0fdb",
+            "_id": "a54dfb41-baf8-4ad9-9fa6-d19b48d0ff4c",
             "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
-            "containerId": "3866f481-44e3-4d24-80dc-7d61046a4440",
-            "name": "Get All Devices",
-            "url": "{{host}}/devices",
-            "method": "GET",
-            "sortNum": 10000,
-            "created": "2023-06-30T03:30:02.344Z",
-            "modified": "2023-06-30T03:31:35.055Z",
+            "containerId": "e2d86400-83a7-411a-8b7b-e821507587d0",
+            "name": "incoming msg",
+            "url": "{{host}}/webhook",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-06-30T03:40:12.702Z",
+            "modified": "2023-06-30T11:54:04.618Z",
             "headers": [],
             "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"kwid-2605630cf636463da5ce2f4110a\",\n  \"webhook_type\": \"incoming_message\",\n  \"payload\": {\n    \"id\": \"kwid-2605630cf636463da5ce2f4110a\",\n    \"device_id\": \"iphone-x-pro\",\n    \"sender\": \"6285186858487\",\n    \"from_me\": false,\n    \"message_type\": \"text\",\n    \"text\": \"Hallo\",\n    \"caption\": null,\n    \"is_group_message\": false,\n    \"group_id\": null,\n    \"timestamp\": 1631306956,\n    \"contact\": {\n      \"name\": null,\n      \"vcard\": null\n    },\n    \"location\": {\n      \"latitude\": 0,\n      \"longitude\": 0,\n      \"name\": null,\n      \"address\": null\n    },\n    \"meta\": {\n      \"file_name\": null,\n      \"seconds\": 0,\n      \"size\": 41,\n      \"mime_type\": \"plain/text\",\n      \"dimension\": {\n        \"height\": 0,\n        \"width\": 0\n      }\n    },\n    \"interactive_response\": {\n      \"id\": null,\n      \"label\": null\n    }\n  },\n  \"created_at\": \"2021-09-10T20:49:16.000Z\",\n  \"server_time\": \"2021-09-10T20:49:17.462Z\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ]
