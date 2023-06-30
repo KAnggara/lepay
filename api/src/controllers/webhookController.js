@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import 'dotenv/config';
 import { logger } from '../app/logging.js';
 import { prismaClient } from '../app/database.js';
@@ -27,7 +26,6 @@ const webhookIncomingMessage = async (req, res) => {
     });
 
     if (check === null) {
-      console.log('No response found');
       res.status(204).end();
     } else {
       const data = {
@@ -53,15 +51,11 @@ const webhookIncomingMessage = async (req, res) => {
         method: 'POST',
         payload: JSON.stringify(data),
       };
+
       try {
         const { body, response } = await apiRequest(reqParams);
-        console.log(body);
         res.status(response.statusCode).json(JSON.parse(body));
       } catch (error) {
-        console.error('Something went wrong', {
-          body: error.body,
-          statusCode: error.response.statusCode,
-        });
         res.status(error.response.statusCode).json(JSON.parse(error.body));
       }
     }
