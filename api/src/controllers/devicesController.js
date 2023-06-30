@@ -31,13 +31,8 @@ const getDevices = async (req, res) => {
   };
   try {
     const { body, response } = await apiRequest(reqParams);
-    console.log(body);
     res.status(response.statusCode).json(JSON.parse(body));
   } catch (error) {
-    console.error('Something went wrong', {
-      body: error,
-      statusCode: error.response.statusCode,
-    });
     res.status(error.response.statusCode).json(JSON.parse(error.body));
   }
 };
