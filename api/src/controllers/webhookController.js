@@ -34,7 +34,7 @@ const webhookIncomingMessage = async (req, res) => {
         device_id: device_id,
         message_type: message_type,
       };
-      if (check.hardwareId && check.state) {
+      if (check.hardwareId != null && check.state != null) {
         await prismaClient.hardware.update({
           where: {
             id: check.hardwareId,
