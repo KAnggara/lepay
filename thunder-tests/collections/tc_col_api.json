@@ -1,0 +1,31 @@
+{
+    "_id": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
+    "colName": "API",
+    "created": "2023-06-30T03:29:49.986Z",
+    "sortNum": 10000,
+    "folders": [
+        {
+            "_id": "3866f481-44e3-4d24-80dc-7d61046a4440",
+            "name": "Devices",
+            "containerId": "",
+            "created": "2023-06-30T03:30:08.874Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "fcf63e0b-32a1-4119-80a5-90caab5a0fdb",
+            "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
+            "containerId": "3866f481-44e3-4d24-80dc-7d61046a4440",
+            "name": "Get All Devices",
+            "url": "{{host}}/devices",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-30T03:30:02.344Z",
+            "modified": "2023-06-30T03:31:35.055Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

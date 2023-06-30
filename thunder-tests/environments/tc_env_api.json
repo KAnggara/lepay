@@ -1,0 +1,18 @@
+{
+    "_id": "017a2557-5839-4b64-9bd3-81102dc8a51a",
+    "name": "API",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-06-30T03:30:34.503Z",
+    "modified": "2023-06-30T03:30:34.503Z",
+    "data": [
+        {
+            "name": "host",
+            "value": "http://localhost:3000"
+        },
+        {
+            "name": "token",
+            "value": "y0xgWUtKbmOLYe_wcI^RFNK5imm8qC99V}OXodIti4RJpn{@-kelvin"
+        }
+    ]
+}
