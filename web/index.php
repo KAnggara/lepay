@@ -60,13 +60,13 @@ function timer($time)
         <div class="p-4">
           <ul class="space-y-1">
             <li>
-              <a href="./index.html" class="flex items-center bg-blue-200 rounded-md font-bold text-sm text-blue-900 p-3">
+              <a href="./" class="flex items-center bg-blue-200 rounded-md font-bold text-sm text-blue-900 p-3">
                 <span class="material-symbols-outlined mr-4"> memory </span>
                 Dashboard
               </a>
             </li>
             <li>
-              <a href="./trigger.html" class="flex items-center bg-blue-200 rounded-md font-bold text-sm text-blue-900 p-3">
+              <a href="./trigger" class="flex items-center bg-blue-200 rounded-md font-bold text-sm text-blue-900 p-3">
                 <span class="material-symbols-outlined mr-4"> tune </span>
                 Trigger
               </a>
