@@ -4,7 +4,7 @@ include_once("config.php");
 
 // Fetch all users data from database
 $hardware = mysqli_query($mysqli, "SELECT * FROM hardwares ORDER BY id ASC");
-$logs = mysqli_query($mysqli, "SELECT * FROM logs ORDER BY id ASC limit 4 ");
+$logs = mysqli_query($mysqli, "SELECT * FROM logs ORDER BY id DESC limit 4 ");
 
 
 if (isset($_POST['update'])) {
