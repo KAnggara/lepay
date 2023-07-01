@@ -155,6 +155,9 @@ function timer($time)
     function close_window() {
       confirm("Close Window?");
     }
+    setTimeout(function() {
+      window.location.reload(1);
+    }, 5000);
   </script>
 </body>
 
