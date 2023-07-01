@@ -23,17 +23,28 @@ function timer($time)
 {
   $now = time();
   $diff = $now - $time;
+
   if ($diff < 60) {
     return $diff . " detik yang lalu";
-  } else if ($diff > 60) {
-    if ($diff > 3600) {
-      $diff = $diff / 3600;
-      return round($diff) . " jam yang lalu";
-    } else {
-      $diff = $diff / 60;
-      return round($diff) . " menit yang lalu";
-    }
   }
+
+  if ($diff < 3600) {
+    $diff = $diff / 60;
+    return round($diff) . " menit yang lalu";
+  }
+
+  if ($diff < 86400) {
+    $diff = $diff / 3600;
+    return round($diff) . " jam yang lalu";
+  }
+
+  if ($diff < 31536000) {
+    $diff = $diff / 86400;
+    return round($diff) . " hari yang lalu";
+  }
+
+  $diff = $diff / 31536000;
+  return number_format($diff, 1) . " tahun yang lalu";
 }
 
 ?>
