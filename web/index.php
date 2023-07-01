@@ -16,7 +16,7 @@ if (isset($_POST['update'])) {
   $update = mysqli_query($mysqli, "UPDATE hardwares SET state='$state' WHERE id=$id");
 
   // Redirect to homepage to display updated user in list
-  header("Location: index.php");
+  header("Location: /");
 }
 
 function timer($time)
