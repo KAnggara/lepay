@@ -38,5 +38,16 @@ CREATE TABLE `hardwares` (
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+-- CreateTable
+CREATE TABLE `logs` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `sender` VARCHAR(100) NOT NULL,
+    `time` INTEGER NOT NULL,
+    `text` VARCHAR(100) NOT NULL,
+    `device_id` VARCHAR(100) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 -- AddForeignKey
 ALTER TABLE `messages` ADD CONSTRAINT `messages_hardwareId_fkey` FOREIGN KEY (`hardwareId`) REFERENCES `hardwares`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;

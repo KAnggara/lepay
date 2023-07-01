@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
-import { PrismaClient } from '@prisma/client';
+import { logs } from './logSeeder.js';
 import { messages } from './messageSeeder.js';
+import { PrismaClient } from '@prisma/client';
 import { hardwares } from './hardwareSeeder.js';
 const prisma = new PrismaClient();
 
 const load = async () => {
-  const tableNames = ['hardwares', 'users', 'messages', 'devices'];
+  const tableNames = ['hardwares', 'users', 'messages', 'devices', 'logs'];
 
   try {
     for (const tableName of tableNames) {
@@ -22,6 +23,11 @@ const load = async () => {
     await prisma.message.createMany({
       data: messages,
     });
+
+    await prisma.log.createMany({
+      data: logs,
+    });
+
     console.log('Added product data');
   } catch (e) {
     console.error(e);
