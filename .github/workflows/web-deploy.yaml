@@ -1,0 +1,21 @@
+name: 🚀 Deploy website on push
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  web-deploy:
+    name: 🎉 FTP Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          local-dir: ./web/
+          server: ${{ secrets.SOP_HOST }}
+          username: ${{ secrets.SOP_FTP_USER }}
+          password: ${{ secrets.SOP_FTP_PASS }}
+          server-dir: public_html/wahyuda/
