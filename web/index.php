@@ -110,7 +110,9 @@ function timer($time)
                   echo " rounded-xl shadow-md'>";
                   echo "<div class='font-bold text-xl text-gray-800 leading-none'>" . $hardware_data['name'] . "</div>";
                   echo "<div class='mt-5'>";
-                  echo "<button type='submit' name='update' value='Update' class='inline-flex items-center justify-center p-1 rounded-full bg-white text-gray-800 hover:text-green-500 text-sm font-semibold transition'>";
+                  echo "<button type='submit' name='update' value='Update' class='inline-flex items-center justify-center p-1 rounded-full bg-white text-gray-800 ";
+                  echo $hardware_data['state'] == 1 ? "hover:text-green-500 " : "hover:text-red-500 ";
+                  echo "  text-sm font-semibold transition'>";
                   echo "<input type='text' name='id' value='" . $hardware_data['id'] . "' class='hidden'/>";
                   echo "<input type='number' name='state' value='" . $hardware_data['state'] . "' class='hidden'/>";
                   echo "<span class='material-symbols-outlined'>";
