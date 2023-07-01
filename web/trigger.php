@@ -44,7 +44,7 @@ function timer($time)
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tugas Akhir</title>
+  <title>Tugas Akhir | Trigger</title>
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
