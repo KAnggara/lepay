@@ -17,6 +17,13 @@
                     "dataFilePath": ""
                 }
             }
+        },
+        {
+            "_id": "a4048755-0558-4dbf-8bf3-02640e1895f8",
+            "name": "Device",
+            "containerId": "",
+            "created": "2023-07-01T11:06:40.654Z",
+            "sortNum": 30000
         }
     ],
     "requests": [
@@ -209,6 +216,31 @@
                     "value": ""
                 }
             ]
+        },
+        {
+            "_id": "4c7bdf90-4374-4ecc-af47-2bb4bcc059a7",
+            "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
+            "containerId": "a4048755-0558-4dbf-8bf3-02640e1895f8",
+            "name": "Get Devices List",
+            "url": "{{host}}/devices",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-07-01T11:06:58.211Z",
+            "modified": "2023-07-01T11:09:53.275Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
         }
     ]
 }
