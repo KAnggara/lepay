@@ -10,8 +10,9 @@ const webhookIncomingMessage = async (req, res) => {
   const text = payload.text;
   const sender = payload.sender;
   const device_id = payload.device_id;
-  const message_type = payload.message_type;
+  const timestamp = payload.timestamp;
   const webhook_type = body.webhook_type;
+  const message_type = payload.message_type;
 
   if (webhook_type === 'incoming_message') {
     const check = await prismaClient.message.findFirst({
@@ -34,6 +35,16 @@ const webhookIncomingMessage = async (req, res) => {
         device_id: device_id,
         message_type: message_type,
       };
+
+      await prismaClient.log.create({
+        data: {
+          text: text,
+          sender: sender,
+          time: timestamp,
+          device_id: device_id,
+        },
+      });
+
       if (check.hardwareId != null && check.state != null) {
         await prismaClient.hardware.update({
           where: {
