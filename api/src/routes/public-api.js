@@ -12,6 +12,10 @@ import getQRCode from '../controllers/qrController.js';
 
 const publicRouter = new express.Router();
 
+publicRouter.get('/', (req, res) => {
+  res.status(301).redirect('https://wahyuda.my.id');
+});
+
 publicRouter.get('/qr', getQRCode);
 publicRouter.post('/devices', addDevices);
 publicRouter.get('/devices', getAllDevices);
