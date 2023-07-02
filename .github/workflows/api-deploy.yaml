@@ -1,4 +1,4 @@
-name: 🚀 Deploy website on push
+name: 🚀 Deploy API on push
 
 on:
   push:
@@ -12,6 +12,14 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
+      - name: 🏗 Get depedency
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+      - run: |
+          cd api
+          ls -la
+          npm install
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
