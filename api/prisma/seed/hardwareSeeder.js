@@ -1,8 +1,8 @@
 export const hardwares = [
   {
-    name: 'Ayam',
+    name: 'ESP32-Hardware_1',
   },
   {
-    name: 'Bebek',
+    name: 'ESP32-Hardware_2',
   },
 ];

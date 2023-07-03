@@ -18,17 +18,17 @@ const load = async () => {
     await prisma.hardware.createMany({
       data: hardwares,
     });
-    console.log('Added category data');
+    console.log('Added hardwares data');
 
     await prisma.message.createMany({
       data: messages,
     });
+    console.log('Added messages data');
 
     await prisma.log.createMany({
       data: logs,
     });
-
-    console.log('Added product data');
+    console.log('Added logs data');
   } catch (e) {
     console.error(e);
     process.exit(1);
