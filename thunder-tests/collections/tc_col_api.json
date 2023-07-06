@@ -24,6 +24,13 @@
             "containerId": "",
             "created": "2023-07-01T11:06:40.654Z",
             "sortNum": 30000
+        },
+        {
+            "_id": "15f1794d-394b-495c-bd17-468b756e03ba",
+            "name": "Message",
+            "containerId": "",
+            "created": "2023-07-06T07:37:55.141Z",
+            "sortNum": 50000
         }
     ],
     "requests": [
@@ -241,6 +248,44 @@
             ],
             "params": [],
             "tests": []
+        },
+        {
+            "_id": "08d4b6c2-97ab-481a-949f-b414e9029731",
+            "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
+            "containerId": "15f1794d-394b-495c-bd17-468b756e03ba",
+            "name": "Send Message",
+            "url": "{{host}}/messages",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-06T07:38:15.923Z",
+            "modified": "2023-07-06T07:57:31.984Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"message\": \"Halo ini adalah pesan dari api ya\",\n  \"phone_number\": \"6285186858487\",\n  \"message_type\": \"text\",\n  \"device_id\": \"iphone-x-pro\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "Content-Length",
+                    "custom": "",
+                    "action": ">",
+                    "value": "0"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": ""
+                }
+            ]
         }
     ]
 }
