@@ -10,24 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ contains(github.event.head_commit.message, '#api') }}
     steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v3
-      - name: 🏗 Get depedency
-        uses: actions/setup-node@v3
+      - name: 💻 Connect with SSH
+        uses: appleboy/ssh-action@v0.1.9
         with:
-          node-version: "18.x"
-      - run: |
-          cd api
-          ls -la
-          npm install
-          ls -la
-          tar -czvf node_modules.tar.gz node_modules
-          ls -la
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
-        with:
-          local-dir: ./api/
-          server: ${{ secrets.SOP_HOST }}
-          username: ${{ secrets.SOP_FTP_USER }}
-          password: ${{ secrets.SOP_FTP_PASS }}
-          server-dir: public_html/wahyuda/api/
+          host: ${{ secrets.API_HOST }}
+          username: ${{ secrets.API_USERNAME }}
+          key: ${{ secrets.API_KEY }}
+          script: whoami
