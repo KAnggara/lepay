@@ -7,6 +7,7 @@ import {
   deleteDevices,
 } from '../controllers/devicesController.js';
 import getQRCode from '../controllers/qrController.js';
+import sendMessage from '../controllers/messageController.js';
 import getHardware from '../controllers/hardwareController.js';
 import webhookMessages from '../controllers/webhookController.js';
 
@@ -21,6 +22,7 @@ publicRouter.get('/devices', getAllDevices);
 publicRouter.get('/hardware/:id', getHardware);
 publicRouter.get('/devices/:device_id', getDevices);
 publicRouter.post('/devices', addDevices);
+publicRouter.post('/messages', sendMessage);
 publicRouter.post('/webhook', webhookMessages);
 publicRouter.delete('/devices/:device_id', deleteDevices);
 
