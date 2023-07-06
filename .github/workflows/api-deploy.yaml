@@ -30,4 +30,5 @@ jobs:
           passphrase: ${{ secrets.API_PASSPHRASE }}
           script: |
             cd ${{ secrets.API_DIR }}
+            cd api
             npm install
