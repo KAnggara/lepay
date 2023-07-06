@@ -3,7 +3,7 @@ import { logger } from '../app/logging.js';
 import { prismaClient } from '../app/database.js';
 import { apiRequest } from '../services/services.js';
 
-const webhookIncomingMessage = async (req, res) => {
+const webhookMessages = async (req, res) => {
   const body = req.body;
   const payload = body.payload;
 
@@ -76,4 +76,4 @@ const webhookIncomingMessage = async (req, res) => {
   }
 };
 
-export { webhookIncomingMessage };
+export default webhookMessages;

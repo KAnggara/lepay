@@ -6,10 +6,9 @@ import {
   getAllDevices,
   deleteDevices,
 } from '../controllers/devicesController.js';
-
-import { webhookIncomingMessage } from '../controllers/webhookController.js';
 import getQRCode from '../controllers/qrController.js';
 import getHardware from '../controllers/hardwareController.js';
+import webhookMessages from '../controllers/webhookController.js';
 
 const publicRouter = new express.Router();
 
@@ -18,12 +17,12 @@ publicRouter.get('/', (req, res) => {
 });
 
 publicRouter.get('/qr', getQRCode);
-publicRouter.post('/devices', addDevices);
 publicRouter.get('/devices', getAllDevices);
 publicRouter.get('/hardware/:id', getHardware);
 publicRouter.get('/devices/:device_id', getDevices);
+publicRouter.post('/devices', addDevices);
+publicRouter.post('/webhook', webhookMessages);
 publicRouter.delete('/devices/:device_id', deleteDevices);
-publicRouter.post('/webhook', webhookIncomingMessage);
 
 publicRouter.get('*', function (req, res) {
   res.status(404).send('what???');
