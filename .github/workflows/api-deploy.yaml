@@ -10,6 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ contains(github.event.head_commit.message, '#api') }}
     steps:
+      - name: ⏱ Stop App
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.API_HOST }}
+          username: ${{ secrets.API_USERNAME }}
+          key: ${{ secrets.API_KEY }}
+          passphrase: ${{ secrets.API_PASSPHRASE }}
+          script: pm2 stop all
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
       - name: 💻 Send File with SCP
@@ -21,7 +29,7 @@ jobs:
           passphrase: ${{ secrets.API_PASSPHRASE }}
           source: "api/*"
           target: ${{ secrets.API_DIR }}
-      - name: 💻 Connect with SSH
+      - name: 💻 Start App with SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.API_HOST }}
@@ -32,3 +40,5 @@ jobs:
             cd ${{ secrets.API_DIR }}
             cd api
             npm install
+            cd src
+            pm2 start app.js
