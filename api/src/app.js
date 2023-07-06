@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
 import { web } from './app/app.js';
+import 'dotenv/config';
 
-web.listen(3000, () => {
-  // logger.info('Listening on port 3000');
-  console.info('Listening on port 3000');
+const port = process.env.API_PORT || 3000;
+
+web.listen(port, () => {
+  console.info('Listening on port ' + port);
 });
