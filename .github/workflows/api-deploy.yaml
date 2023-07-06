@@ -16,4 +16,5 @@ jobs:
           host: ${{ secrets.API_HOST }}
           username: ${{ secrets.API_USERNAME }}
           key: ${{ secrets.API_KEY }}
+          passphrase: ${{ secrets.API_PASSPHRASE }}
           script: whoami
