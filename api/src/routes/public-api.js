@@ -25,4 +25,12 @@ publicRouter.get('/devices/:device_id', getDevices);
 publicRouter.delete('/devices/:device_id', deleteDevices);
 publicRouter.post('/webhook', webhookIncomingMessage);
 
+publicRouter.get('*', function (req, res) {
+  res.status(404).send('what???');
+});
+
+publicRouter.post('*', function (req, res) {
+  res.status(404).send('what???');
+});
+
 export { publicRouter };
