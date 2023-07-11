@@ -70,6 +70,10 @@ const webhookMessages = async (req, res) => {
         res.status(error.response.statusCode).json(JSON.parse(error.body));
       }
     }
+  } else if (webhook_type === 'send_message_response') {
+    res.status(200).end();
+  } else if (webhook_type === 'device_status_changed') {
+    res.status(200).end();
   } else {
     logger.error({ message: 'Unknown webhook type of ' + webhook_type });
     res.status(400).end();
