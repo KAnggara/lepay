@@ -31,6 +31,13 @@
             "containerId": "",
             "created": "2023-07-06T07:37:55.141Z",
             "sortNum": 50000
+        },
+        {
+            "_id": "11ce31cc-9986-4c06-91ee-cff58516e87b",
+            "name": "QR",
+            "containerId": "",
+            "created": "2023-07-06T07:41:00.376Z",
+            "sortNum": 60000
         }
     ],
     "requests": [
@@ -286,6 +293,88 @@
                     "value": ""
                 }
             ]
+        },
+        {
+            "_id": "3c926a12-ab05-4fb9-85ef-4aa42e474b86",
+            "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
+            "containerId": "11ce31cc-9986-4c06-91ee-cff58516e87b",
+            "name": "Get QR Code",
+            "url": "{{host}}/qr?device_id=iphone-x-pro",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-06T07:39:41.873Z",
+            "modified": "2023-07-06T07:41:10.984Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "device_id",
+                    "value": "iphone-x-pro",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "7b3bbee9-d50f-4c3a-bd59-c618493e725f",
+            "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
+            "containerId": "e2d86400-83a7-411a-8b7b-e821507587d0",
+            "name": "Webhook Register",
+            "url": "",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-07-06T08:03:16.558Z",
+            "modified": "2023-07-06T08:03:16.558Z",
+            "headers": []
+        },
+        {
+            "_id": "8fc3a606-a957-48ae-9565-277cb2960f9b",
+            "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
+            "containerId": "a4048755-0558-4dbf-8bf3-02640e1895f8",
+            "name": "Add Devices",
+            "url": "{{host}}/devices",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2023-07-06T10:01:35.933Z",
+            "modified": "2023-07-06T10:01:45.360Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7b3f658b-ca6d-4eb2-96f2-7088d30035ff",
+            "colId": "7e89a5c2-52e8-4760-a01d-8297adb757f4",
+            "containerId": "a4048755-0558-4dbf-8bf3-02640e1895f8",
+            "name": "Delete Devices",
+            "url": "{{host}}/devices",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-07-06T10:02:42.440Z",
+            "modified": "2023-07-06T10:03:13.628Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
         }
     ]
 }

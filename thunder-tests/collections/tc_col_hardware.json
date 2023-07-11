@@ -1,0 +1,55 @@
+{
+    "_id": "5f3e4c5b-2fae-4f1f-9663-377fac7e635a",
+    "colName": "Hardware",
+    "created": "2023-07-06T07:28:32.741Z",
+    "sortNum": 20000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a50486b1-d91a-4478-8422-e37691089912",
+            "colId": "5f3e4c5b-2fae-4f1f-9663-377fac7e635a",
+            "containerId": "",
+            "name": "Get Hardware",
+            "url": "http://api.wahyuda.my.id:3000/hardware/1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-06T07:28:35.169Z",
+            "modified": "2023-07-06T07:30:39.375Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": ""
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.name",
+                    "action": "notequal",
+                    "value": ""
+                },
+                {
+                    "type": "json-query",
+                    "custom": "json.state",
+                    "action": "istype",
+                    "value": "boolean"
+                }
+            ]
+        }
+    ],
+    "settings": {
+        "runOptions": {
+            "delay": 1,
+            "iterations": 1000,
+            "dataFilePath": ""
+        }
+    }
+}
