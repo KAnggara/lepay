@@ -96,9 +96,9 @@ function timer($time)
       <div class="p-4">
         <ul class="space-y-1">
           <li>
-            <a class="flex items-center rounded-xl bg-blue-200 py-3 px-4 text-sm font-bold text-blue-900" href="#" onclick="close_window();return false;">
-              <span class="material-symbols-outlined mr-4"> logout </span>
-              Exit
+            <a class="flex items-center rounded-xl bg-blue-200 py-3 px-4 text-sm font-bold text-blue-900" href="Documentation.pdf">
+              <span class="material-symbols-outlined mr-4"> description </span>
+              Documentation
             </a>
           </li>
         </ul>
@@ -216,11 +216,6 @@ function timer($time)
     </div>
     </div>
   </main>
-  <script>
-    function close_window() {
-      confirm("Close Window?");
-    }
-  </script>
 </body>
 
 </html>
